@@ -1,0 +1,91 @@
+1) Creer fichier dans le repertoire
+$touch nomFichier.extension 
+
+2) initialiser code sur git (important)
+$git init 
+
+3) s'authentifier sur git bash (nom et email)
+$git config --global user.name 'nom user'
+$git config --global user.email 'email user'
+
+4) ajouter dans liste des fichiers a sauvegarder ce fichier
+$git add nomFichier.extension
+
+5) voir l'etat de tous les fichiers dans la liste des fichiers a sauvegarder + voir le branche actuel
+$git status
+
+6) enlever un fichier de la liste de fichiers a sauvegarder 
+$git rm --cached nomFichier.extension
+
+RM: --cached permet de seulement enlever le fichier de la liste ; si vous omettez ce parametre , le fichier sera completement supprime du repertoire
+
+7) ajouter dans liste des fichiers a sauvegarder tous les fichiers du repertoire
+$git add .
+
+8) enlever recursivement un repertoire de la liste de fichiers a sauvegarder 
+$git rm -r --cached nomRepertoire
+
+9) enlever tous les fichiers de la liste de fichiers a sauvegarder 
+$git rm -r --cached .
+
+10) ajouter tous les fichiers d'une extension specifique dans la liste des fichiers a sauvegarder
+$git add *.extension
+
+11) ajouter tous les fichiers de plusieurs extensions specifiques dans la liste des fichiers a sauvegarder
+$git add *.extension1 *.extension2 ... *.extensionN
+
+12) supprimer les modifications
+$git checkout -- .
+
+13) sauvegarder les fichiers (n'oubliez de faire $git add avant)
+$git commit
+
+----------------------Debut manuel commande editeur VIM---------------------------------------------------
+`i` pour pouvoir ecrire
+`echape` pour quitter mode ecriture
+`:wq` qui signifie "write and quit" pour quitter VIM
+----------------------Fin manuel commande editeur VIM-------------------------------
+
+14) sauvegarder les fichiers sans entrer dans VIM
+$git commit -m 'nom du changement'
+
+15)
+RM : utilite de .gitignore
+Pour creer le fichier .gitignore 
+$touch .gitignore 
+
+Mettez le nom de tous les fichiers/dossiers dont le sauvegarde doit ignorer dans .gitignore
+
+16) creer une nouvelle branche
+$git branch nomBranche
+
+17) changer de branche
+$git checkout nomBranche
+
+18) lister les branches
+$git branch --list
+
+19) fusionner une branche a la branche en cours
+$git merge nomBranche
+
+20) push an existing repository from the command line
+$git remote add origin https://github.com/yoan1601/testGit.git
+$git branch -M nomBranche
+$git push -u origin nomBranche
+
+21) ajout markdown
+$touch README.md
+
+22) push sur github
+$git push
+
+23) recuperer les maj du travail fait par d'autre membre dans git hub
+$git pull
+
+24) telecharger et recuperer les travaux en cas de perte de donnees (suppression par exemple)
+dans github :
+	cliquer sur le boutton vert "<> code"
+	copier le lien comme celui ci "https://github.com/yoan1601/testGit.git"
+
+dans git bash :
+$git clone https://github.com/yoan1601/testGit.git
